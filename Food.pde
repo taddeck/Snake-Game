@@ -10,7 +10,7 @@ class Food {
 
   public void drawFood() {
 
-    fill(0, 250, 0);
+    fill(255, 0, 0);
     rect(food.x, food.y, scl(), scl());
     
   }

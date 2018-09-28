@@ -18,7 +18,7 @@ class Player {
 
     for(int i = 0; i < snake.size(); i++){
     
-      fill(250);
+      fill(102, 51, 51);
       rect(snake.get(i).x, snake.get(i).y, scl(), scl());
     
     }
@@ -116,7 +116,7 @@ class Player {
       
      this.snake.set(0, (this.snake.get(0).add(this.acc)));
      
-     println(this.snake.get(this.snake.size() - 1).x  + " " + this.snake.get(this.snake.size() - 1).y + "  " + this.snake.get(0).x  + " " + this.snake.get(0).y);
+     
     
   }
 
@@ -161,6 +161,12 @@ class Player {
   public int getXPos() {
 
     return floor(this.snake.get(0).x);
+  }
+  
+  
+  public int getSize(){
+    
+   return this.snake.size();
   }
   
   

@@ -8,6 +8,7 @@
     
   private Player player;
   private Food food;
+  private Data data;
   
   
   
@@ -15,6 +16,8 @@
     
     player = new Player();
     food = new Food();
+    data = new Data();
+    
     
   }
   
@@ -22,7 +25,7 @@
   
   public void update(){
     
-    background(0);
+    background(130);
     
   }
   
@@ -37,14 +40,17 @@
     
     player.move();
     
-    player.drawPlayer();
     food.drawFood();
+    player.drawPlayer();
+    
     
     
     if(ckeckFoodEaten()){
       
       food = new Food();
       player.addSize();
+      data.addScore(player.getSize());
+      
       
     }
     
@@ -52,6 +58,7 @@
       
       player = new Player();
       food = new Food();
+      data = new Data();
       
     }
     
