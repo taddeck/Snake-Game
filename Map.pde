@@ -42,6 +42,7 @@
     
     food.drawFood();
     player.drawPlayer();
+    data.drawScore();
     
     
     
@@ -50,6 +51,7 @@
       food = new Food();
       player.addSize();
       data.addScore(player.getSize());
+      data.checkHighScore();
       
       
     }
@@ -58,7 +60,7 @@
       
       player = new Player();
       food = new Food();
-      data = new Data();
+      data.resetScore();
       
     }
     
